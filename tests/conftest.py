@@ -66,3 +66,14 @@ def h_principal():
     }
 
     return headers
+
+@pytest.fixture
+def h_non_existent_teacher():
+    headers = {
+        'X-Principal': json.dumps({
+            'teacher_id': 100,
+            'user_id': 1
+        })
+    }
+
+    return headers
